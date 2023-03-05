@@ -67,7 +67,7 @@ class CookieBuilder
 	public function get($name, $default = "")
     {
 		if ($this->has($name)) {
-			return $this->config["secure_key"] == true ? Crypt::Decode($this->cookie[$this->config["prefix"] . $name]) : $this->cookie[$this->config["prefix"] . $name];
+			return $this->config["secure"] == true ? Crypt::Decode($this->cookie[$this->config["prefix"] . $name], $this->config["secure_key"]) : $this->cookie[$this->config["prefix"] . $name];
 		}
 		return isset($this->cookie[$name])? $this->cookie[$name] : $default;
 	}
