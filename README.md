@@ -42,6 +42,9 @@ print Cookie::has("app") ? "存在" : "不存在";
 // 获取
 print Cookie::get("app");
 
+// 全部
+print Cookie::all();
+
 // 删除
 Cookie::delete("app");
 
