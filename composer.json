@@ -1,7 +1,7 @@
 {
     "name": "letnn/cookie",
-    "description": "基于Jwt的字符串加密与解密",
-    "keywords": ["letnn", "cookie", "crypt", "加密解密"],
+    "description": "cookie组件 使用Jwt加密cookie数据提高网站安全性",
+    "keywords": ["letnn", "cookie"],
     "license": "MIT",
     "authors": [
       {
