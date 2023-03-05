@@ -11,7 +11,7 @@
 composer require letnn/cookie
 ```
 
-#### 配置 不设置则使用默认
+#### Cookie配置
 ```php
 \letnn\Cookie::config([
     // cookie 保存时间
