@@ -5,6 +5,31 @@ namespace letnn;
 class Cookie
 {
 
+	protected static $link;	
+
+	public static function single()
+	{
+		if (!self::$link) {
+			self::$link = new CookieBuilder();
+		}		
+		return self::$link;
+	}
+
+	public function __call($method, $params)
+	{
+		return call_user_func_array([self::single(), $method], $params);
+	}
+
+	public static function __callStatic($name, $arguments)
+	{
+		return call_user_func_array([self::single(), $name], $arguments);
+	}
+	
+}
+
+class CookieBuilder
+{
+
     protected $config = [
         // cookie 保存时间
         'expire'   => 0,
@@ -20,10 +45,11 @@ class Cookie
         'prefix' => 'letphp##'
     ];
 
-    protected $cookie = $_COOKIE;
+    protected $cookie = [];
     
     public function config($config)
     {
+		$this->cookie = $_COOKIE;
         $this->config  = array_merge($this->config, array_change_key_case($config));
     }
 
