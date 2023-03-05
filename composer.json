@@ -1,0 +1,22 @@
+{
+    "name": "letnn/cookie",
+    "description": "基于Jwt的字符串加密与解密",
+    "keywords": ["letnn", "cookie", "crypt", "加密解密"],
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "LangShen",
+        "email": "langshen@vip.qq.com"
+      }
+    ],
+    "require": {
+      "php": ">=7.1",
+      "letnn/crypt": "1.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "letnn\\": "src"
+      }
+    }
+  }
+  
