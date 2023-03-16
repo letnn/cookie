@@ -25,7 +25,7 @@ composer require letnn/cookie
     //  cookie 安全传输密钥
     'secure_key' => 'LangShen',
     //  cookie 前缀
-    'prefix' => 'letphp##'
+    'prefix' => 'letphp_'
 ]);
 ```
 
